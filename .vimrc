@@ -29,8 +29,8 @@ set t_kD=^?
 " バックスペースキーの動作を普通のテキストエディタと同じようにする
 set backspace=indent,eol,start 
 " 見た目によるカーソル移動をする
-nnoremap j gj
-nnoremap k gk 
+" nnoremap j gj
+" nnoremap k gk 
 " シンタックスを有効にする
 syntax enable 
 " カラー設定
