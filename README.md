@@ -1,9 +1,17 @@
-# 即座に環境を構築する
+# 即座に環境を構築するやつ
 
 ## 目的
 vagrant等で立てた環境に対して最低限の設定を一括で行う  
 emacs,vim,zsh等の設定ファイルの設置  
 コマンドの一括インストール  
+
+## 対応パッケージ管理システム
+- apt   
+Debian系Linux  
+- yum    
+Red Hat系Linux
+- homebrew    
+MAC OS  
 
 ## 実行
 sh install-package.sh  
@@ -20,4 +28,17 @@ bash install-package.sh
 - ubuntu-14.04  
 apt
 - OS X Yosemite 10.10  
-brew
+brew  
+- CentOS release 6.6 (Final)  
+yum  
+
+## その他のパッケージ管理システム
+### 今後入れる可能性があるもの  
+- portage  
+Gentoo Linux  
+- pacman  
+Arch Linux  
+- YaST  
+openSUSE  
+
+ 
