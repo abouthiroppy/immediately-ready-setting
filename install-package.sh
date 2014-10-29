@@ -1,37 +1,61 @@
 #!/bin/sh
 
 # copy setting-files
-##############################
-#cp -r .emacs.d ~/
-#cp .vimrc ~/
-##############################
+############################################################
+echo "copy setting-file?(y|n)"
+read copy_setting_yn
+if [ $copy_setting_yn = "y" ]; then
+    cp -r .emacs.d ~/
+    cp .vimrc ~/
+fi
+
+############################################################
 
 # install package
+############################################################
+
+# superuser
 ##############################
+echo "please change user su."
+su
+##############################
+
 filename=./package-list
-package_manager_list=("apt-get install" "yum")
+package_manager_list=("apt-get install" "yum" "brew install")
 
 echo "Please select the number of package manager."
 echo "1: apt"
 echo "2: yum"
+echo "3: brew"
 read select_num
 
-# apt-get install
-if [ $select_num = 1 ]; then
-    echo ${package_manager_list[0]}
-# yum
-elif [ $select_num = 2 ]; then
-    echo ${package_manager_list[1]}
-else
-    echo "The input value is not right."
+
+if [ $select_num  -gt 3 -o $select_num  -lt 1 ]; then
+    echo "out"
     exit 1
 fi
 
+# debug
+##############################
+# apt-get install
+#if [ $select_num = 1 ]; then
+#    echo ${package_manager_list[0]}
+# yum
+#elif [ $select_num = 2 ]; then
+#    echo ${package_manager_list[1]}
+#else
+#    echo "The input value is not right."
+#    exit 1
+#fi
+##############################
+
+
 install_package(){
     echo $1
-
+    yes | ${package_manager_list[$select_num - 1]} $1
 }
 
+##############################
 if [ -f $filename ]; then
     cat $filename | while read line; do
         if [ "$line" = "" ]; then
@@ -44,5 +68,6 @@ else
     echo "Error: create package-list."
     exit 1
 fi
-
 ##############################
+
+############################################################
