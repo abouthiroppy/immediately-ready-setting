@@ -22,4 +22,6 @@ sh install-package.sh
 - ubuntu-14.04  
 apt
 - OS X Yosemite 10.10  
-brew
+brew  
+- CentOS release 6.6 (Final)  
+yum  
