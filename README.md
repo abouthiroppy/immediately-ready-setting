@@ -5,12 +5,10 @@ vagrant等で立てた環境に対して最低限の設定を一括で行う
 emacs,vim,zsh等の設定ファイルの設置  
 コマンドの一括インストール  
 
-## Ubuntu
-bash install-package.sh  
-注意: /bin/shがbashのシンボリックリンクではなくdashなのでbashで実行
-
-## Other
-sh install-package.sh
+## 実行
+sh install-package.sh  
+bash install-package.sh   
+注意: Ubuntuの場合,/bin/shがbashのシンボリックリンクではなくdashなのでbashで実行  
 
 ## 各ファイル
 - install-package.sh  
