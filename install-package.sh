@@ -16,10 +16,9 @@ fi
 
 # superuser
 ##############################
-echo "please change user su."
-su
+#echo "please change user su."
+#su
 ##############################
-
 filename=./package-list
 package_manager_list=("apt-get install" "yum" "brew install")
 
@@ -30,8 +29,8 @@ echo "3: brew"
 read select_num
 
 
-if [ $select_num  -gt 3 -o $select_num  -lt 1 ]; then
-    echo "out"
+if [ $select_num  -gt ${#package_manager_list[@]} -o $select_num  -lt 1 ]; then
+    echo "Error: The input value is not right."
     exit 1
 fi
 
@@ -51,8 +50,7 @@ fi
 
 
 install_package(){
-    echo $1
-    yes | ${package_manager_list[$select_num - 1]} $1
+    yes | sudo ${package_manager_list[$select_num - 1]} $1
 }
 
 ##############################
