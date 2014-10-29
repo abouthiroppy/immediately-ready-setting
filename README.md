@@ -6,6 +6,7 @@ emacs,vim,zsh等の設定ファイルの設置
 コマンドの一括インストール  
 
 ## 実行
+sh install-package.sh  
 bash install-package.sh   
 注意: Ubuntuの場合,/bin/shがbashのシンボリックリンクではなくdashなのでbashで実行  
 
