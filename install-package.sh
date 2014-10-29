@@ -20,7 +20,7 @@ fi
 #su
 ##############################
 filename=./package-list
-package_manager_list=("apt-get install" "yum" "brew install")
+package_manager_list=("sudo pt-get install" "yum" "brew install")
 
 echo "Please select the number of package manager."
 echo "1: apt"
@@ -50,7 +50,7 @@ fi
 
 
 install_package(){
-    yes | sudo ${package_manager_list[$select_num - 1]} $1
+    yes | ${package_manager_list[$select_num - 1]} $1
 }
 
 ##############################
