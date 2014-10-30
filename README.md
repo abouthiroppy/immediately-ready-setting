@@ -31,6 +31,8 @@ apt
 brew  
 - CentOS release 6.6 (Final)  
 yum  
+- Linux Mint 17 Cinnamon  
+apt  
 
 ## その他のパッケージ管理システム
 ### 今後入れる可能性があるもの  
