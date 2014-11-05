@@ -30,7 +30,7 @@ set t_kD=^?
 set backspace=indent,eol,start 
 " 見た目によるカーソル移動をする
 " nnoremap j gj
-" nnoremap k gk 
+" nnoremap k gk
 " シンタックスを有効にする
 syntax enable 
 " カラー設定
